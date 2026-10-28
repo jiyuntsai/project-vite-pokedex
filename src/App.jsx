@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import * as d3 from "d3";
-import Card from "./Card.jsx";
+import PokemonCard from "./PokemonCard.jsx";
 
 const pokemons = [
   { id: 1, name: "Bulbasaur", type: "Grass", hp: 45, attack: 49 },
@@ -42,48 +42,7 @@ export default function App() {
       }}
     >
       {pokemons.map((pokemon) => (
-        <Card key={pokemon.id}>
-          <p>{pokemon.type}</p>
-          <img
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
-            alt={pokemon.name}
-          />
-          <p>{pokemon.name}</p>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-            }}
-          >
-            <p>HP</p>
-            <div
-              style={{
-                width: pokemon.hp,
-                height: 10,
-                backgroundColor: "pink",
-                borderRadius: 4,
-              }}
-            />
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-            }}
-          >
-            <p>Attack</p>
-            <div
-              style={{
-                width: pokemon.attack,
-                height: 10,
-                backgroundColor: "purple",
-                borderRadius: 4,
-              }}
-            />
-          </div>
-        </Card>
+        <PokemonCard key={pokemon.id} pokemon={pokemon} />
       ))}
     </div>
   );
