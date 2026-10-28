@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import * as d3 from "d3";
+import Card from './Card.jsx'
 
 const pokemons = [
   { id: 1, name: "Bulbasaur", type: "Grass", hp: 45, attack: 49 },
@@ -33,12 +31,26 @@ console.log(pokemons);
 // Sprite image URL pattern:
 // `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <h1>Pokedex project</h1>
-  )
-}
+    <div 
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: 16, 
+      fontFamily: "Courier New, monospace", 
+      }}>
+      
+      {pokemons.map((pokemon) => (
+        <Card key={pokemon.id}>
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+            alt={pokemon.name}
+          />
+          <p>{pokemon.name}</p>
+        </Card>
+      ))}
 
-export default App
+    </div>
+  );
+}
