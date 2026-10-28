@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vite-project-pokedex/',
+  base: '/project-vite-pokedex/',
   plugins: [react()],
 })
