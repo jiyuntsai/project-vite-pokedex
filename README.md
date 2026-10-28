@@ -18,3 +18,4 @@ If you are developing a production application, we recommend using TypeScript wi
 # vite-project-pokedex
 # vite-project-pokedex
 # vite-project-pokedex
+# project-vite-pokedex
