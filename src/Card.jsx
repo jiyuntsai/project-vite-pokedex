@@ -5,12 +5,13 @@ const Card = ({ children }) => {
     <div
       style={{
         width: 200,
-        alignItems: "center",
-        border: "1px solid #ddd",
-        borderRadius: 8,
+        border: "4px solid #222",
+        borderRadius: 0,
         padding: 16,
+        backgroundColor: "#fff",
+        boxShadow: "6px 6px 0 #222",
         boxSizing: "border-box",
-        backgroundColor: "white",
+        fontSize: 10,
       }}
     >
       {children}

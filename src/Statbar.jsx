@@ -19,7 +19,7 @@ const StatBar = ({ label, value, color, min = 0, max = 160 }) => {
             width: `${percent}%`,
             height: "100%",
             backgroundColor: color,
-            borderRadius: 4,
+            borderRadius: 2,
           }}
         />
       </div>

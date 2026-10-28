@@ -12,8 +12,8 @@ const PokemonCard = ({ pokemon }) => {
         alt={pokemon.name}
       />
       <p>{pokemon.name}</p>
-      <StatBar label="HP" value={pokemon.hp} color="pink" />
-      <StatBar label="Attack" value={pokemon.attack} color="purple" />
+      <StatBar label="HP" value={pokemon.hp} color="#4361ee" />
+      <StatBar label="Attack" value={pokemon.attack} color="#e63946" />
     </Card>
   );
 };

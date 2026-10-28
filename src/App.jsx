@@ -38,7 +38,8 @@ export default function App() {
         display: "flex",
         flexWrap: "wrap",
         gap: 16,
-        fontFamily: "Courier New, monospace",
+        fontFamily: "Press Start 2P, monospace",
+        fontSize: 12,
       }}
     >
       {pokemons.map((pokemon) => (
