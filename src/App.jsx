@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 import * as d3 from "d3";
-import Card from './Card.jsx'
+import Card from "./Card.jsx";
 
 const pokemons = [
   { id: 1, name: "Bulbasaur", type: "Grass", hp: 45, attack: 49 },
@@ -33,24 +33,58 @@ console.log(pokemons);
 
 export default function App() {
   return (
-    <div 
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: 16, 
-      fontFamily: "Courier New, monospace", 
-      }}>
-      
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 16,
+        fontFamily: "Courier New, monospace",
+      }}
+    >
       {pokemons.map((pokemon) => (
         <Card key={pokemon.id}>
+          <p>{pokemon.type}</p>
           <img
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
             alt={pokemon.name}
           />
           <p>{pokemon.name}</p>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            <p>HP</p>
+            <div
+              style={{
+                width: pokemon.hp,
+                height: 10,
+                backgroundColor: "pink",
+                borderRadius: 4,
+              }}
+            />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            <p>Attack</p>
+            <div
+              style={{
+                width: pokemon.attack,
+                height: 10,
+                backgroundColor: "purple",
+                borderRadius: 4,
+              }}
+            />
+          </div>
         </Card>
       ))}
-
     </div>
   );
 }
